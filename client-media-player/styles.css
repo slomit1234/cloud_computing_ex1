@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#videoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.videoItem {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+}
+
+#videoPlayerContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#videoPlayer {
+    width: 80%;
+}
