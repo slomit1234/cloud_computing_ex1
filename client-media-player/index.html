@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video List</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Awesome Media Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" type="image/png">
 </head>
 <body>
-    <h1>Video List</h1>
-    <div id="videoList"></div>
-    <script src="script.js"></script>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
+    <h1>My Awesome Media Player</h1>
+  </header>
+  <div class="container">
+    <div class="video-list">
+      <h2>Available Videos</h2>
+      <table id="mediaTable">
+        <thead>
+          <tr>
+            <th>Video List</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="video-player">
+      <video id="mediaPlayer" controls style="display:none; width: 100%; max-width: 600px;">
+        <source id="mediaSource" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
