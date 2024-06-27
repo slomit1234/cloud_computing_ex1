@@ -6,7 +6,7 @@ const app = express();
 
 const port = 3000;
 const bucketName = 'slomitas-my-video-storage';
-const cloudFrontDomain = 'd1pkskx0yceldq.cloudfront.net'; // Replace with your CloudFront domain
+const cloudFrontDomain = 'd1pkskx0yceldq.cloudfront.net'; // Your CloudFront domain
 
 const s3 = new AWS.S3();
 
