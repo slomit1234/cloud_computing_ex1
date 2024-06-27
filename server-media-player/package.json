@@ -1,0 +1,22 @@
+{
+  "name": "server-media-player",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "slomitas",
+  "license": "ISC",
+  "description": "a",
+  "dependencies": {
+    "aws-sdk": "^2.1649.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slomit1234/cloud_computing_ex1/blob/main"
+  }
+}

@@ -6,6 +6,7 @@ const app = express();
 
 const port = 3000;
 const bucketName = 'slomitas-my-video-storage';
+const cloudFrontDomain = 'd1pkskx0yceldq.cloudfront.net'; // Replace with your CloudFront domain
 
 const s3 = new AWS.S3();
 
@@ -29,20 +30,8 @@ app.get('/getVideoUrl', (req, res) => {
     return res.status(400).send('File name is required');
   }
 
-  const params = {
-    Bucket: bucketName,
-    Key: fileName,
-    Expires: 3600 // URL expiry time in seconds
-  };
-
-  s3.getSignedUrl('getObject', params, (err, url) => {
-    if (err) {
-      console.error('Error generating presigned URL:', err);
-      return res.status(500).send('Internal Server Error');
-    }
-
-    res.json({ url });
-  });
+  const cloudFrontUrl = `https://${cloudFrontDomain}/${fileName}`;
+  res.json({ url: cloudFrontUrl });
 });
 
 app.listen(port, () => {
